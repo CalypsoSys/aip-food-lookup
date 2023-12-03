@@ -1,48 +1,54 @@
-import React, { useState } from 'react';
-import { View, TextInput, Button, FlatList, Text, StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, TextInput, FlatList, Text, StyleSheet } from 'react-native';
 
 export default function App() {
   const [inputText, setInputText] = useState('');
-  const [data1, setData1] = useState([]);
-  const [data2, setData2] = useState([]);
+  const [possible_allowed, setPossibleAllowed] = useState([]);
+  const [possible_disallowed, setPossibleDisallowed] = useState([]);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(`https://api.hashimojoe.com/?key=${inputText}`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (inputText.length >= 3) {
+          const response = await fetch(`https://api.hashimojoe.com/?key=${inputText}`);
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          const result = await response.json();
+          setPossibleAllowed(result.possible_allowed || []);
+          setPossibleDisallowed(result.possible_disallowed || []);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
       }
-      const result = await response.json();
-      setData1(result.possible_allowed || []);
-      setData2(result.possible_disallowed || []);
-    } catch (error) {
-      console.error('Error fetching data:', error.message);
-    }
-  };
+    };
+
+    // Call fetchData when the component mounts and when inputText changes
+    fetchData();
+  }, [inputText]);
 
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Enter a food"
+        placeholder="Enter a food to check"
         value={inputText}
         onChangeText={(text) => setInputText(text)}
       />
-      <Button title="Lookup AIP Food" onPress={fetchData} />
 
       <View style={styles.listContainer}>
         <Text style={styles.listTitle}>Allowed on AIP:</Text>
         <FlatList
-          data={data1}
+          data={possible_allowed}
           keyExtractor={(item) => item.toString()}
           renderItem={({ item }) => <Text>{item}</Text>}
         />
       </View>
 
       <View style={styles.listContainer}>
-        <Text style={styles.listTitle}>Not Allowed on AIP:</Text>
+        <Text style={styles.listTitle}>NOT Allowed on API:</Text>
         <FlatList
-          data={data2}
+          data={possible_disallowed}
           keyExtractor={(item) => item.toString()}
           renderItem={({ item }) => <Text>{item}</Text>}
         />
