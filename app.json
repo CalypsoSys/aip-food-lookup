@@ -18,11 +18,11 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.calypsosystems.aipfoodlookup",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jmsjmsjms.aipfoodlookup"
     },
     "web": {
       "favicon": "./assets/favicon.png"

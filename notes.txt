@@ -1,2 +1,301 @@
 npx expo start
 npx expo start --tunnel
+eas build --platform android
+eas build --profile development --platform android
+
+
+    1  git status
+    2  git config --global --add safe.directory /mnt/c/Device42/GoLang/golang-monorepo
+    3  git status
+    4  git pull
+    5  git status
+    6  git reset --hard origin/HEAD
+    7  git pull
+    8  git status
+    9  git checkout master
+   10  git reset --hard origin/HEAD
+   11  sudo git clean -f -d
+   12  git status
+   13  go
+   14  git status
+   15  code .
+   16  ll
+   17  pwd
+   18  ssh-keygen
+   19  cat .ssh/id_rsa.pub
+   20  cd /mnt/c/Device42/GoLang/saas-data-normalization/
+   21  code .
+   22  cd ~/
+   23  go
+   24  wget https://go.dev/dl/go1.20.11.linux-amd64.tar.gz
+   25  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz
+   26  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.11.linux-amd64.tar.gz
+   27  sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.11.linux-amd64.tar.gz
+   28  go
+   29  vi .profile
+   30  go
+   31  source ~/.bashrc
+   32  go
+   33  exit
+   34  go
+   35  go version
+   36  echo $GOPATH
+   37  set
+   38  env
+   39  cd ~
+   40  vi .profile
+   41  echo $HOME
+   42  vi .profile
+   43  exit
+   44  go
+   45  sudo apt install golang-go
+   46  go
+   47  sudo apt install gccgo-go
+   48  ll /mnt/c/Device42/GoLang
+   49  env
+   50  env | grep GO
+   51  cd ~/
+   52  go get -u github.com/go-delve/delve/cmd/dlv
+   53  go
+   54  env
+   55  vi .profile
+   56  exit
+   57  go get -u github.com/go-delve/delve/cmd/dlv
+   58  cd ~/
+   59  go get -u github.com/go-delve/delve/cmd/dlv
+   60  vi .profile
+   61  exit
+   62  cd ~/
+   63  go install -v golang.org/x/tools/gopls@latest
+   64  ll
+   65  rm go1.20.11.linux-amd64.tar.gz
+   66  l
+   67  df -h
+   68  mkdir gocode
+   69  ll
+   70  vi .profile
+   71  ll /home/joe/gocode/
+   72  cat .profile
+   73  exit
+   74  cd ~/
+   75  vi .bashrc
+   76  exit
+   77  git pull
+   78  cd gocode/saas-data-normalization/
+   79  git pull
+   80  cd gocode/saas-data-normalization/
+   81  make
+   82  sudo apt install make
+   83  make
+   84  make build-os-matcher
+   85  go generate
+   86  cd internal/matching/osmatcher/
+   87  go generate
+   88  cd ..
+   89  go generate cmd/os_matcher_test/main.go
+   90  go generate internal/matching/osmatcher/nix_files.go
+   91  go generate internal/matching/osmatcher
+   92  cp output/enrichminer/os_eol_output_all.csv ./meta-data/.
+   93  cd internal/matching/osmatcher/
+   94  cp ../../../output/enrichminer/os_eol_output_all.csv ./meta-data/.
+   95  cp ./../../config/enrichminer/matching/static_golden_words.conf ./meta-data/.
+   96  cp ../../../config/enrichminer/matching/static_golden_words.conf ./meta-data/.
+   97  cp ../../../config/enrichminer/matching/golden_ignore_words.conf ./meta-data/.
+   98  cp ../../../config/enrichminer/matching/stop_arch_words.conf ./meta-data/.
+   99  cp ../../../config/enrichminer/matching/os_edition_refinements.json ./meta-data/.
+  100  cd ..
+  101  make
+  102  make build-os-matcher
+  103  rm bin/enrichminer/os_matcher_x64
+  104  make build-os-matcher
+  105  ll bin/enrichminer/os_matcher_x64
+  106  make build-os-matcher
+  107  git mv config/enrichminer/matching/static_golden_words.conf  config/enrichminer/matching/ignore_os_records.conf
+  108  make build-os-matcher
+  109  cd gocode/
+  110  git clone git@bitbucket.org:sawmill/saas-data-normalization.git
+  111  ll
+  112  cd saas-data-normalization/
+  113  code
+  114  cd ~/
+  115  go install -v github.com/go-delve/cmd/dlv@latest
+  116  history
+  117  go install -v github.com/go-delve/delve/cmd/dlv@latest
+  118  sudo apt-get install gcc -y
+  119  sudo apt-get update && sudo apt-get upgrade -y
+  120  sudo apt autoremove -y
+  121  sudo apt-get install gcc -y
+  122  gcc -version
+  123  gcc version
+  124  gcc --version
+  125  git config --global user.email "joe@device42.com"
+  126  git config --global user.name "joe"
+  127  gocode/saas-data-normalization/bin/enrichminer/os_matcher_x64
+  128  ./gocode/saas-data-normalization/bin/enrichminer/os_matcher_x64
+  129  history
+  130  pwd
+  131  cd /
+  132  find -name oapi-codegen --version
+  133  find -name oapi-codegen
+  134  sudo find -name oapi-codegen
+  135  go install github.com/deepmap/oapi-codegen/v2/cmd/oapi-codegen@latest
+  136  oapi-codegen
+  137  cd ~/
+  138  ll
+  139  cd gocode/
+  140  ll
+  141  ll bin/
+  142  ll bin/oapi-codegen
+  143  bin/oapi-codegen
+  144  pwd
+  145  cd ~/
+  146  vi .profile
+  147  source ~/.profile
+  148  cd ~/
+  149  pwd
+  150  vi .profile
+  151  oapi-codegen
+  152  env
+  153  source ~/.profile
+  154  vi .profile
+  155  source ~/.profile
+  156  oapi-codegen
+  157  history | grep go
+  158  cd /tmp
+  159  wget https://go.dev/dl/go1.21.04.linux-amd64.tar.gz
+  160  wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+  161  history | grep go
+  162  sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.4.linux-amd64.tar.gz
+  163  go version
+  164  pwd
+  165  cd ~/gocode/
+  166  ll
+  167  git clone git@github.com:CalypsoSys/aip_food_lookup.git
+  168  ll ~/.ssh/
+  169  cat ~/.ssh/id_rsa.pub
+  170  git clone git@github.com:CalypsoSys/aip_food_lookup.git
+  171  code
+  172  sudo apt install docker-ce docker-ce-cli containerd.io
+  173  sudo apt update
+  174  sudo apt install docker-ce docker-ce-cli containerd.io
+  175  sudo apt-get update
+  176  # Add the repository to Apt sources:
+  177  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  178    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  179  sudo apt-get update
+  180  # Add Docker's official GPG key:
+  181  sudo apt-get update
+  182  # download and install docker's GPG signing key
+  183  wget -q -O - https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  184  archType="amd64"
+  185  if test "$(uname -m)" = "aarch64"; then     archType="arm64"; fi
+  186  # add docker's package repo
+  187  echo "deb [arch=${archType} signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+  188  sudo apt update
+  189  # download and install docker's GPG signing key
+  190  wget -q -O - https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  191  # download and install docker's GPG signing key
+  192  wget -q -O - https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  193  archType="amd64"
+  194  if test "$(uname -m)" = "aarch64"; then     archType="arm64"; fi
+  195  echo "deb [arch=${archType} signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+  196  sudo apt update
+  197  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  198  docker
+  199  sudo service docker start
+  200  docker run hello-world
+  201  sudo docker run hello-world
+  202  sudo docker run --help
+  203  sudo usermod -a -G docker $USER
+  204  wsl --shutdown
+  205  id
+  206  sudo service docker start
+  207  docker ps -a
+  208  sudo docker ps -a
+  209  exit
+  210  docker ps -a
+  211  sudo service docker restart
+  212  iptables --version
+  213  update-alternatives --display iptables
+  214  lsmod | grep ip_tables
+  215  modprobe ip_tables
+  216  docker --version
+  217  ls -l /var/run/docker/netns
+  218  sudo ls -l /var/run/docker/netns
+  219  sudo mkdir -p /var/run/docker/netns
+  220  systemctl status docker
+  221  sudo service docker restart
+  222  sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+  223  sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+  224  sudo service docker restart
+  225  docker ps
+  226  exit
+  227  docker
+  228  pwd
+  229  cd gocode/aip_food_lookup/
+  230  chmod +x scripts/build.sh
+  231  ./scripts/build.sh
+  232  sudo docker run -p 8080:8080 aip_food_lookup
+  233  docker ps
+  234  sudo docker ps
+  235  sudo docker images
+  236  cd ./docker
+  237  sudo docker build -t aip_food_lookup .
+  238  sudo docker build -t aip_food_lookup .
+  239  ./aip_food_lookup
+  240  sudo docker run -p 8080:8080 aip_food_lookup
+  241  sudo docker build -t aip_food_lookup .
+  242  sudo docker run -p 8080:8080 aip_food_lookup
+  243  cd ..
+  244  ll
+  245  ./scripts/build.sh
+  246  sudo docker run -p 8080:8080 aip_food_lookup
+  247  docker-compose
+  248  sudo apt install docker-compose
+  249  sudo docker rmi -f $(docker images -f "dangling=true" -q)
+  250  sudo docker rmi -f $(sudo docker images -f "dangling=true" -q)
+  251  sudo docker save aip_food_lookup > ~/aip_food_lookup.tar
+  252  sudo docker save aip_food_lookup > aip_food_lookup.tar
+  253  ll
+  254  cp docker/aip_food_lookup.tar /mnt/c/transfer/.
+  255  cp docker/docker-compose.yml /mnt/c/transfer/.
+  256  ./scripts/build.sh
+  257  cp docker/aip_food_lookup.tar /mnt/c/transfer/.
+  258  ./scripts/build.sh
+  259  git mod tidy
+  260  go mod tidy
+  261  cd cmd/
+  262  cd aip_food_lookup/
+  263  go mod tidy
+  264  nvm
+  265  wsl
+  266  nvm
+  267  npm
+  268  nvm install --lts
+  269  nvm install node
+  270  nvm ls
+  271  node --version
+  272  npm --version
+  273  cd gocode/
+  274  ll
+  275  sudo rm 'archType="arm64"'
+  276  ll
+  277  sudo rm 'if test "$(uname -m)" = "aarch64"'
+  278  ll
+  279  npm install --global eas-cli && npx create-expo-app aip-food-lookup && cd aip-food-lookup && eas init --id 242f7d37-47e7-4ef7-a343-0da67e69c14c
+  280  ll
+  281  git status
+  282  eas build:configure
+  283  eas build --platform android
+  284  eas build:android
+  285  eas build --profile development --platform android
+  286  expo
+  287  npm start
+  288  npx expo install react-dom react-native-web @expo/webpack-config
+  289  npx expo start
+  290  npx expo start --tunnel
+  291  expo
+  292  npx expo start
+  293  eas build:configure
+  294  eas build:android
+  295  eas build --platform android
