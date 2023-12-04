@@ -7,8 +7,8 @@ export default function App() {
   const [possible_disallowed, setPossibleDisallowed] = useState([]);
 
   const isButtonEnabled = inputText.length > 2;
-  const apiSourceUrl = "http://localhost:8080/";
-  //const apiSourceUrl = "https://api.hashimojoe.com/";
+  //const apiSourceUrl = "http://localhost:8080/";
+  const apiSourceUrl = "https://api.hashimojoe.com/";
 
   useEffect(() => {
     const fetchData = async () => {
