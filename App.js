@@ -6,17 +6,19 @@ export default function App() {
   const [possible_allowed, setPossibleAllowed] = useState([]);
   const [possible_disallowed, setPossibleDisallowed] = useState([]);
 
+  const isButtonEnabled = inputText.length > 2;
+  const apiSourceUrl = "http://localhost:8080/";
+  //const apiSourceUrl = "https://api.hashimojoe.com/";
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         if (inputText.length >= 3) {
-          const response = await fetch(`https://api.hashimojoe.com/?key=${inputText}`);
-          //const response = await fetch(`http://localhost:8080/search?key=${inputText}`);
+          const response = await fetch(apiSourceUrl + `search?key=${inputText}`);
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
           const result = await response.json();
-          //setPossibleAllowed(result.possible_allowed.concat(['1','2','3','4','5','6','7','8','9','1','2','3','4','5','6','7','8','9','1','2','3','4','5','6','7','8','9','1','2','3','4','5','6','7','8','9','end'])|| []);
           setPossibleAllowed(result.possible_allowed || []);
           setPossibleDisallowed(result.possible_disallowed || []);
         } else {
@@ -32,11 +34,9 @@ export default function App() {
     fetchData();
   }, [inputText]);
 
-  const isButtonEnabled = inputText.length > 2;
-
   const suggestFood = async (allowed) => {
     try {
-      const response = await fetch('https://api.hashimojoe.com/suggest', {
+      const response = await fetch(apiSourceUrl + 'suggest', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

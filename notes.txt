@@ -2,6 +2,7 @@ npx expo start
 npx expo start --tunnel
 eas build --platform android
 eas build --profile development --platform android
+eas build --profile preview --platform android ==> apk I think
 
 
     1  git status
