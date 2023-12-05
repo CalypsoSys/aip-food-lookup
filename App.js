@@ -7,8 +7,8 @@ export default function App() {
   const [possible_disallowed, setPossibleDisallowed] = useState([]);
 
   const isButtonEnabled = inputText.length > 2;
-  //const apiSourceUrl = "http://localhost:8080/";
-  const apiSourceUrl = "https://api.hashimojoe.com/";
+  const apiSourceUrl = "http://localhost:8080/";
+  //const apiSourceUrl = "https://api.hashimojoe.com/";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -73,6 +73,7 @@ export default function App() {
           keyExtractor={(item) => item.toString()}
           renderItem={({ item }) => <Text style={styles.listItem}>{item}</Text>}
           style={possible_allowed.length > 0 ? styles.flatListWithBorder : null}
+          scrollEnabled={true}
         />
       </View>
 
@@ -83,6 +84,7 @@ export default function App() {
           keyExtractor={(item) => item.toString()}
           renderItem={({ item }) => <Text style={styles.listItem}>{item}</Text>}
           style={possible_disallowed.length > 0 ? styles.flatListWithBorder : null}
+          scrollEnabled={true}
         />
       </View>
 
@@ -133,8 +135,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ddd', // Light gray border
     borderRadius: 5, // Optional: Add border radius for a rounded look
+    maxHeight: 160
   },
   listItem: {
+    height: 40,
     padding: 8,
     fontSize: 16,
     backgroundColor: '#fff', // White background
