@@ -14,7 +14,14 @@ export default function App() {
     const fetchData = async () => {
       try {
         if (inputText.length >= 3) {
-          const response = await fetch(apiSourceUrl + `search?key=${inputText}`);
+          const response = await fetch(apiSourceUrl + `search?key=${inputText}`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Nonsense-I-Know': 'hTynsccNrLePKU57ovHnT0HZVfRaWkpgmVEk0uFIvvTprgR5b0GSRkQLUkntwByhPNuogUvPzyYDhzkN25WQ7DxkVR37+PTcStVjC1OMRvNExdufeZCtGG4ncs02ksr6dXGHEeJ0YeA2qpY+GAKIPyOynWRdcTlds+4ExxU/livGCbpT1c9YpVPy+8waavnffHXWN9V5sVVZ0qt/MNUTrlUWkeatjLondE0hX0nOCB3lYQuUqtz4qBu2SA+MnIjMvrEr8zi+GMvKrnLKYlbY0Drycypa+kv6tJJpmmsG6VSu9SqN5WG3n0mjj9QAEZFRL76WRDcwK6ryv11Wv04j5w==',
+            },
+          });
+      
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
@@ -40,6 +47,7 @@ export default function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Nonsense-I-Know': 'hTynsccNrLePKU57ovHnT0HZVfRaWkpgmVEk0uFIvvTprgR5b0GSRkQLUkntwByhPNuogUvPzyYDhzkN25WQ7DxkVR37+PTcStVjC1OMRvNExdufeZCtGG4ncs02ksr6dXGHEeJ0YeA2qpY+GAKIPyOynWRdcTlds+4ExxU/livGCbpT1c9YpVPy+8waavnffHXWN9V5sVVZ0qt/MNUTrlUWkeatjLondE0hX0nOCB3lYQuUqtz4qBu2SA+MnIjMvrEr8zi+GMvKrnLKYlbY0Drycypa+kv6tJJpmmsG6VSu9SqN5WG3n0mjj9QAEZFRL76WRDcwK6ryv11Wv04j5w=='
         },
         body: JSON.stringify({
           inputText,
