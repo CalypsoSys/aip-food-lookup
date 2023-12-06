@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "aip-food-lookup",
+    "name": "AIP Food Lookup",
     "slug": "aip-food-lookup",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -33,5 +33,8 @@
       }
     },
     "owner": "jmsjmsjms"
-  }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-3896841757339434/7129090527"
+   }  
 }

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Button, TextInput, FlatList, Text, StyleSheet } from 'react-native';
+//import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+//import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
 
 export default function App() {
   const [inputText, setInputText] = useState('');
@@ -7,8 +9,8 @@ export default function App() {
   const [possible_disallowed, setPossibleDisallowed] = useState([]);
 
   const isButtonEnabled = inputText.length > 2;
-  const apiSourceUrl = "http://localhost:8080/";
-  //const apiSourceUrl = "https://api.hashimojoe.com/";
+  //const apiSourceUrl = "http://localhost:8080/";
+  const apiSourceUrl = "https://api.hashimojoe.com/";
 
   useEffect(() => {
     const fetchData = async () => {

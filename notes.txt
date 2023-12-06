@@ -4,6 +4,19 @@ eas build --platform android
 eas build --profile development --platform android
 eas build --profile preview --platform android ==> apk I think
 
+npm i react-native-google-mobile-ads
+
+
+
+      /*
+      <BannerAd
+        unitId={adUnitId}
+        size={BannerAdSize.FULL_BANNER}
+        requestOptions={{
+          requestNonPersonalizedAdsOnly: true,
+        }}
+      />
+      */
 
     1  git status
     2  git config --global --add safe.directory /mnt/c/Device42/GoLang/golang-monorepo
