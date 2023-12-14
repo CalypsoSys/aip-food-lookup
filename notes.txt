@@ -7,6 +7,13 @@ eas build --profile preview --platform android ==> apk I think
 npm i react-native-google-mobile-ads
 
 
+npm i @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+
+
+react-navigation-stack react-navigation-tabs
+
+
 
       /*
       <BannerAd
